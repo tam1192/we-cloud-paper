@@ -8,7 +8,6 @@
 plugins {
     // Apply the java-library plugin for API and implementation separation.
     id 'java-library'
-    id 'eclipse'
 }
 
 repositories {
@@ -16,6 +15,7 @@ repositories {
     mavenCentral()
     maven{
         url 'https://repo.papermc.io/repository/maven-public/'
+        url 'https://maven.enginehub.org/repo/'
     }
 }
 
@@ -31,6 +31,7 @@ dependencies {
     // This dependency is used internally, and not exposed to consumers on their own compile classpath.
     implementation 'com.google.guava:guava:32.1.1-jre'
     implementation 'io.papermc.paper:paper-api:1.20.2-R0.1-SNAPSHOT'
+    implementation 'com.sk89q.worldedit:worldedit-bukkit:7.2.9'
 }
 
 // Apply a specific Java toolchain to ease working on different environments.
@@ -44,3 +45,5 @@ tasks.named('test') {
     // Use JUnit Platform for unit tests.
     useJUnitPlatform()
 }
+
+compileJava.options.encoding = 'UTF-8'

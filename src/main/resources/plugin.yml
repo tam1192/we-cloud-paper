@@ -1,0 +1,13 @@
+name: we-cloud
+version: 1.0.0
+main: com.outlook.tamkame123.wecloud.WeCloud
+description: we-cloud
+author: tamkame123
+website: https://github.com/tam1192/we-cloud
+api-version: '1.20'
+
+commands:
+  test:
+    description: test command
+    usage: /<command> [delete|download|list|rename|upload]
+    permission: testplugin.test
